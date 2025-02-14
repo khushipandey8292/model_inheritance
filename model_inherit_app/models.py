@@ -30,3 +30,9 @@ class ExamCenter(models.Model):
 class Student1(ExamCenter):
     name=models.CharField(max_length=70)
     roll=models.IntegerField()
+    
+# proxy model#########################################################   
+class MyExamCenter(ExamCenter):
+    class Meta:
+        proxy=True
+        ordering=['id']

@@ -11,7 +11,7 @@
     </style>
 </head>
 <body>
-<table>
+{% comment %} <table>
  <h3>Student Information</h3>
     <th>ID</th>
     <th>Name</th>
@@ -34,7 +34,7 @@
     <th>Age</th>
     <th>Date</th>
     <th>Salary</th>
-    {% for teacher in teacher %}
+    {% for teacher in teachers %}
      <tr>
         <td>{{teacher.id}}</td>
         <td>{{teacher.name}}</td>
@@ -61,7 +61,39 @@
         <td>{{contractor.payment}}</td>
      </tr>
     {% endfor %}
-</table>
+</table> {% endcomment %}
 
+
+<table>
+   <h3>ExamCenter Information</h3>
+      <th>ID</th>
+      <th>CName</th>
+      <th>City</th>
+      {% for  examcenter in examcenters %}
+       <tr>
+          <td>{{examcenter.id}}</td>
+          <td>{{examcenter.cname}}</td>
+          <td>{{examcenter.city}}</td>
+       </tr>
+      {% endfor %}
+  </table>
+
+<table>
+  <h3>Student1 Information</h3>
+     <th>ID</th>
+     <th>CName</th>
+     <th>City</th>
+     <th>Name</th>
+     <th>Roll</th>
+     {% for  student1 in student1s %}
+      <tr>
+         <td>{{student1.id}}</td>
+         <td>{{student1.cname}}</td>
+         <td>{{student1.city}}</td>
+         <td>{{student1.name}}</td>
+         <td>{{student1.roll}}</td>
+      </tr>
+     {% endfor %}
+</table>
 </body>
 </html>

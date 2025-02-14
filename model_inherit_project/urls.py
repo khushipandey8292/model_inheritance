@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from model_inherit_app import views
+from model_inherit_app import views as v
+from model_app1 import views as v1
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/',views.home),
+    path('home/',v.home),
+    path('about/',v1.model_manager),
 ]
