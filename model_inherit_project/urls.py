@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/',v.home),
     path('about/',v1.model_manager),
+    path('',)
 ]
