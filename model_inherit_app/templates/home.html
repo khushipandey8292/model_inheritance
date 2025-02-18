@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% comment %} <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
         }
     </style>
 </head>
-<body>
+<body> {% endcomment %}
 {% comment %} <table>
  <h3>Student Information</h3>
     <th>ID</th>
@@ -64,7 +64,7 @@
 </table> {% endcomment %}
 
 
-<table>
+{% comment %} <table>
    <h3>ExamCenter Information</h3>
       <th>ID</th>
       <th>CName</th>
@@ -95,5 +95,5 @@
       </tr>
      {% endfor %}
 </table>
-</body>
-</html>
+</body> {% endcomment %}
+{% comment %} </html> {% endcomment %}

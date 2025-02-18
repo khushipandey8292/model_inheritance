@@ -18,9 +18,14 @@ from django.contrib import admin
 from django.urls import path
 from model_inherit_app import views as v
 from model_app1 import views as v1
+from model_app2 import views as v2
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/',v.home),
-    path('about/',v1.model_manager),
-    path('',)
+    # path('home/',v.home),
+    # path('about/',v1.model_manager),
+    path('',v2.home1,name='home1'),
+    path('user/',v2.show_user_data,name='user'),
+    path('page/',v2.show_page_data,name='page'),
+    path('post/',v2.show_post_data,name='post'),
+    path('song/',v2.Show_song_data,name='song'),
 ]

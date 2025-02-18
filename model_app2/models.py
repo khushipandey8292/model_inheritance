@@ -9,9 +9,9 @@ class Page(models.Model):
     page_cate=models.CharField(max_length=70)
     page_publish_date=models.DateField()
     
-# class Like(Page):
-#     page=models.OneToOneField(Page,on_delete=models.CASCADE,primary_key=True,parent_link=True)
-#     likes=models.IntegerField()
+class Like(Page):
+    page=models.OneToOneField(Page,on_delete=models.CASCADE,primary_key=True,parent_link=True)
+    likes=models.IntegerField()
     
 class Post(models.Model):
     user=models.ForeignKey(User,on_delete=models.CASCADE)

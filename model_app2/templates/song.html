@@ -8,6 +8,9 @@
         table,th,tr,td{
             border: 1px solid black
         }
+        body{
+            background:rgb(40,150,179);
+        }
     </style>
 </head>
 <body>
@@ -19,7 +22,7 @@
            {% for dt1 in data1 %}
             <tr>
                <td>{{dt1.song_name}}</td>
-               <td>{{dt1.song_duratione}}</td>
+               <td>{{dt1.song_duration}}</td>
                <td>{{dt1.song_sung_by}}</td>
             </tr>
            {% endfor %}
@@ -34,7 +37,7 @@
            {% for dt2 in data2 %}
             <tr>
                <td>{{dt2.song_name}}</td>
-               <td>{{dt2.song_duratione}}</td>
+               <td>{{dt2.song_duration}}</td>
                <td>{{dt2.song_sung_by}}</td>
             </tr>
            {% endfor %}
@@ -49,8 +52,10 @@
     {% for dt3 in data3 %}
      <tr>
         <td>{{dt3.song_name}}</td>
-        <td>{{dt3.song_duratione}}</td>
+        <td>{{dt3.song_duration}}</td>
         <td>{{dt3.song_sung_by}}</td>
      </tr>
     {% endfor %}
 </table>
+</body>
+</html>
